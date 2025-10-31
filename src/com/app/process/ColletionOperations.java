@@ -16,11 +16,26 @@ public class ColletionOperations {
 		// obj.sortedSetProcessNum();
 		// obj.processMap();
 		
-		obj.processSortedMap();
-		obj.processSortedList();
-		
+		//obj.processSortedMap();
+		//obj.processSortedList();
+		obj.addCustomers();
 	}
 
+	
+	public void addCustomers() {
+		List<Customer> custList = new ArrayList<Customer>();
+		
+		 for(int i=0;;i++) {
+			   Customer c6 = new Customer("Trump", "Trump@gmail.com", "43432432446", 30000,i+10);
+			   custList.add(c6);
+			   try {
+				Thread.sleep(40);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		   }
+	}
 	public void processSortedList() {
 		Customer custObj = null;
 		
@@ -146,7 +161,10 @@ public class ColletionOperations {
 		custList.add(c1);
 		custList.add(c3);
 		custList.add(c4);
-		Iterator<Customer> itr = custList.iterator();
+		
+		  
+		
+		   Iterator<Customer> itr = custList.iterator();
 
 		while (itr.hasNext()) {
 			custObj = itr.next();
